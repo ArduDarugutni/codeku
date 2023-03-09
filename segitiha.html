@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Segitiga</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h3>Menghitung Luas dan Keliling Segitiga</h3>");
+        document.write("<hr/>");
+        //Rumus Luas Segitiga adalah L = 1/2 x alas x tinggi
+        function luas() {
+            var alas = document.getElementById("alas").value;
+            var tinggi = document.getElementById("tinggi").value;
+            var hasil = 0.5 * alas * tinggi;
+            document.getElementById("hasilLuas").innerHTML = hasil;
+        }
+        //Rumus Keliling Segitiga adalah K = sisi1 + sisi2 + sisi3
+        function keliling() {
+            var sisi1 = document.getElementById("sisi1").value;
+            var sisi2 = document.getElementById("sisi2").value;
+            var sisi3 = document.getElementById("sisi3").value;
+            var hasil = parseInt(sisi1) + parseInt(sisi2) + parseInt(sisi3);
+            document.getElementById("hasilKeliling").innerHTML = hasil;
+        }
+    </script>
+
+    <table>
+        <p>Luas:</p>
+        <tr>
+            <td>Alas</td>
+            <td><input type="number" id="alas"></td>
+        </tr>
+        <tr>
+            <td>Tinggi</td>
+            <td><input type="number" id="tinggi"></td>
+            <td><button onclick="luas()">Hitung</button></td>
+        </tr>
+        <tr>
+            <td>Hasil : </td>
+            <td>
+                <p id="hasilLuas"></p>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <p>Keliling:</p>
+        <tr>
+            <td>Sisi 1</td>
+            <td><input type="number" id="sisi1"></td>
+        </tr>
+        <tr>
+            <td>Sisi 2</td>
+            <td><input type="number" id="sisi2"></td>
+        </tr>
+        <tr>
+            <td>Sisi 3</td>
+            <td><input type="number" id="sisi3"></td>
+            <td><button onclick="keliling()">Hitung</button></td>
+        </tr>
+        <tr>
+            <td>Hasil : </td>
+            <td>
+                <p id="hasilKeliling"></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

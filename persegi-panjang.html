@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Persegi Panjang</title>
+</head>
+
+<script>
+    document.write("<h3>Menghitung Luas dan Keliling Persegi Panjang</h3>");
+    document.write("<hr/>");
+    //Rumus Luas persegi panjang adalah L = panjang x lebar
+    function luas() {
+        var panjang = document.getElementById("panjang").value;
+        var lebar = document.getElementById("lebar").value;
+        var hasil = panjang * lebar;
+        document.getElementById("hasilLuas").innerHTML = hasil;
+    }
+    //Rumus Keliling persegi panjang adalah K = 2 x (panjang + lebar)
+    function keliling() {
+        var panjang = document.getElementById("panjang2").value;
+        var lebar = document.getElementById("lebar2").value;
+        var hasil = 2 * (parseInt(panjang) + parseInt(lebar));
+        document.getElementById("hasilKeliling").innerHTML = hasil;
+    }
+</script>
+
+<body>
+    <h2>Persegi Panjang</h2>
+    <table>
+        <p>Luas:</p>
+        <tr>
+            <td>Panjang</td>
+            <td><input type="number" id="panjang"></td>
+        </tr>
+        <tr>
+            <td>Lebar</td>
+            <td><input type="number" id="lebar"></td>
+            <td><button onclick="luas()">Hitung</button></td>
+        </tr>
+        <tr>
+            <td>Hasil : </td>
+            <td>
+                <p id="hasilLuas"></p>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <p>Keliling:</p>
+        <tr>
+            <td>Panjang</td>
+            <td><input type="number" id="panjang2"></td>
+        </tr>
+        <tr>
+            <td>Lebar</td>
+            <td><input type="number" id="lebar2"></td>
+            <td><button onclick="keliling()">Hitung</button></td>
+        </tr>
+        <tr>
+            <td>Hasil : </td>
+            <td>
+                <p id="hasilKeliling"></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
