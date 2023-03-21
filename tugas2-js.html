@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nama = "Ardu Darugutni";
+        let jabatan = "Asisten Manager";
+        let status = "Belum Menikah";
+
+        let gajiPokok = 0;
+        let tunjanganJabatan = 0;
+        let bpjs = 0;
+        let tunjanganKeluarga = 0;
+        let totalPendapatan = 0;
+
+        if (jabatan === "Manager") {
+            gajiPokok = 10000000;
+        } else if (jabatan === "Asisten Manager") {
+            gajiPokok = 8000000;
+        } else if (jabatan === "Staff") {
+            gajiPokok = 5000000;
+        }
+
+        tunjanganJabatan = gajiPokok * 0.1;
+        bpjs = gajiPokok * 0.1;
+
+        if (status === "menikah") {
+            tunjanganKeluarga = gajiPokok * 0.1;
+        }
+
+        totalPendapatan = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+        document.write("Nama Pegawai: " + nama + "<br>");
+        document.write("Jabatan: " + jabatan + "<br>");
+        document.write("Status: " + status + "<br>");
+        document.write("Gaji Pokok: Rp " + gajiPokok + " Juta" + "<br>");
+        document.write("Tunjangan Jabatan: Rp " + tunjanganJabatan + " Juta" + "<br>");
+        document.write("BPJS: Rp " + bpjs + " Juta" + "<br>");
+        document.write("Tunjangan Keluarga: Rp " + tunjanganKeluarga + " Juta" + "<br>");
+        document.write("Total Pendapatan: Rp " + totalPendapatan + " Juta" + "<br>");
+
+    </script>
+</body>
+
+</html>
